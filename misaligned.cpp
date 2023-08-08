@@ -3,6 +3,7 @@
 //#include "ColorMap.h"
 #include <iostream>
 #include <vector>
+#include <assert.h>
 
 struct ColorPair
     {
