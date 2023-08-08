@@ -1,6 +1,6 @@
 #include "PrintColorMapTest.h"
 #include "PrintColorMapTest.h"
-using namespace printcolormap;
+
 
 int main() {
     
