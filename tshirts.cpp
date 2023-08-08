@@ -2,6 +2,8 @@
 #include <assert.h>
 #include "TShirtSize.h"
 
+using namespace tshirt;
+
 void Test_TShirtSize()
 {
     assert(tshirt::size(37) == 'S');
