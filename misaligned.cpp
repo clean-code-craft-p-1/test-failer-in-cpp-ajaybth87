@@ -1,5 +1,4 @@
-##include "PrintColorMapTest.h"
-
+#include "PrintColorMapTest.h"
 #include "PrintColorMapTest.h"
 
 int main() {
