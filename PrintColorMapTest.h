@@ -4,10 +4,9 @@
 
 #include "ColorMap.h"
 #include <assert.h>
-namespace printcolormap
-{
+
 	void test_PrintColorMap();
-}
+
 
 
 

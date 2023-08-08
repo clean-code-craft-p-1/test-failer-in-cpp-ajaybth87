@@ -1,6 +1,6 @@
 #include "PrintColorMapTest.h"
 
-void printcolormap::test_PrintColorMap()
+void test_PrintColorMap()
 {
     std::vector<colormap::ColorPair> colorMap = colormap::PrintColorMap();
     int result = colorMap.size();
