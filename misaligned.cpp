@@ -1,6 +1,34 @@
 //#include "PrintColorMapTest.h"
-#include "PrintColorMapTest.h"
-#include "ColorMap.h"
+//#include "PrintColorMapTest.h"
+//#include "ColorMap.h"
+#include <iostream>
+#include <vector>
+
+struct ColorPair
+    {
+        int number;
+        std::string majorColor;
+        std::string minorColor;
+    };
+
+std::vector<ColorPair> PrintColorMap() {
+    const char* majorColor[] = { "White", "Red", "Black", "Yellow", "Violet" };
+    const char* minorColor[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+    int i = 0, j = 0;
+    std::vector<ColorPair> colorMap;
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            ColorPair cp;
+            cp.number = i * 5 + j;
+            cp.majorColor = majorColor[i];
+            cp.minorColor = minorColor[j];
+            colorMap.push_back(cp);
+            std::cout << cp.number << " | " << cp.majorColor << " | " << cp.minorColor << "\n";
+        }
+    }
+    return colorMap;
+}
+
 void test_PrintColorMap()
 {
     std::vector<ColorPair> colorMap = PrintColorMap();
