@@ -97,7 +97,7 @@ namespace WeatherSpace
     
     void TestRainy()
     {
-        senseweather::SensorStubRainy sensor;
+        SensorStubRainy sensor;
         std::string report = Report(sensor);
         std::cout << report << std::endl;
         assert(report.find("rain") != std::string::npos);
@@ -109,7 +109,7 @@ namespace WeatherSpace
         // to give high precipitation (>60) and low wind-speed (<50)
         // strengthen the assert to expose the bug
         // (function returns Sunny day, it should predict rain)
-        senseweather::SensorStubHighPrecipitation possiblePrecipitation;
+       SensorStubHighPrecipitation possiblePrecipitation;
         std::string report = Report(possiblePrecipitation);
         assert(report.length() > 0);
         assert(report == "Alert, Stormy with heavy rain");
@@ -117,7 +117,7 @@ namespace WeatherSpace
 
     void TestHeatWave()
     {
-        senseweather::SensorStubHeatWave possibleHeatWave;
+        SensorStubHeatWave possibleHeatWave;
         std::string report = Report(possibleHeatWave);
         assert(report.length() > 0);
         assert(report.find("heat") != std::string::npos);
@@ -126,7 +126,7 @@ namespace WeatherSpace
 
     void TestStormWearther()
     {
-        senseweather::SensorStubStorm possibleStorm;
+        SensorStubStorm possibleStorm;
         std::string report = Report(possibleStorm);
         assert(report.length() > 0);
         assert(report == "Alert, Stormy withiout rain");
