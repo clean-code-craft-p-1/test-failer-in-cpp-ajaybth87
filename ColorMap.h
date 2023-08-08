@@ -3,8 +3,7 @@
 
 #include <iostream>
 #include <vector>
-namespace colormap
-{
+
     struct ColorPair
     {
         int number;
@@ -14,6 +13,5 @@ namespace colormap
 
 
     std::vector<colormap::ColorPair> PrintColorMap();
-}
 
 #endif // !COLORMAP_H

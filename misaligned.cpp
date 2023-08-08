@@ -3,7 +3,7 @@
 #include "ColorMap.h"
 void test_PrintColorMap()
 {
-    std::vector<colormap::ColorPair> colorMap = colormap::PrintColorMap();
+    std::vector<ColorPair> colorMap = PrintColorMap();
     int result = colorMap.size();
     assert(result == 25);
 
