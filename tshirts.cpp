@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 #include "tshirts.h"
-char Tshirts::size(int cms) {
+char  size(int cms) {
         char sizeName = '\0';
         if (cms < 38) {
             sizeName = 'S';
@@ -15,7 +15,7 @@ char Tshirts::size(int cms) {
         return sizeName;
     }
 
-void TestTshirts::Test_TShirtSize()
+void Test_TShirtSize()
 {
     assert(size(37) == 'S');
     assert(size(38) == 'S');
@@ -26,6 +26,6 @@ void TestTshirts::Test_TShirtSize()
 }
 
 int main() {
-    TestTshirts::Test_TShirtSize();
+    Test_TShirtSize();
     return 0;
 }
