@@ -12,6 +12,6 @@
     };
 
 
-    std::vector<colormap::ColorPair> PrintColorMap();
+    std::vector<ColorPair> PrintColorMap();
 
 #endif // !COLORMAP_H
