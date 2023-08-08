@@ -1,6 +1,7 @@
 #include <assert.h>
 #include "weatherreport.h"
 #include "TestWeatherReport.h"
+using namespace reporttest;
 namespace WeatherSpace
 {
     std::string Report(const IWeatherSensor& sensor)
