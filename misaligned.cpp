@@ -4,7 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <assert.h>
-
+#include<string>
+#include <iomanip>
 struct ColorPair
     {
         int number;
@@ -21,7 +22,7 @@ std::vector<ColorPair> PrintColorMap() {
     {
         for (j = 0; j <5; j++)
         {
-            colormap::ColorPair cp;
+            ColorPair cp;
             cp.number = i * 5 + j+1;
             cp.majorColor = majorColor[i];
             cp.minorColor = minorColor[j];
@@ -34,7 +35,7 @@ std::vector<ColorPair> PrintColorMap() {
 
 void test_PrintColorMap()
 {
-     std::vector<colormap::ColorPair> colorMap = colormap::PrintColorMap();
+     std::vector<ColorPair> colorMap = PrintColorMap();
     int result = colorMap.size();
     std::string expectedstr = "25|Violet|Slate";
     std::string actualstr = std::to_string(colorMap[24].number) + "|" + colorMap[24].majorColor + "|" + colorMap[24].minorColor;
