@@ -17,14 +17,16 @@ std::vector<ColorPair> PrintColorMap() {
     const char* minorColor[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
     int i = 0, j = 0;
     std::vector<ColorPair> colorMap;
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            ColorPair cp;
-            cp.number = i * 5 + j;
+        for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j <5; j++)
+        {
+            colormap::ColorPair cp;
+            cp.number = i * 5 + j+1;
             cp.majorColor = majorColor[i];
             cp.minorColor = minorColor[j];
             colorMap.push_back(cp);
-            std::cout << cp.number << " | " << cp.majorColor << " | " << cp.minorColor << "\n";
+            std::cout << std::setw(2)<<cp.number << std::setw(2)<< "|" << std::setw(6)<<cp.majorColor << std::setw(2)<< "|" << std::setw(6) << cp.minorColor << "\n";
         }
     }
     return colorMap;
@@ -32,8 +34,11 @@ std::vector<ColorPair> PrintColorMap() {
 
 void test_PrintColorMap()
 {
-    std::vector<ColorPair> colorMap = PrintColorMap();
+     std::vector<colormap::ColorPair> colorMap = colormap::PrintColorMap();
     int result = colorMap.size();
+    std::string expectedstr = "25|Violet|Slate";
+    std::string actualstr = std::to_string(colorMap[24].number) + "|" + colorMap[24].majorColor + "|" + colorMap[24].minorColor;
+    
     assert(result == 25);
 
     assert(colorMap[0].number == 1);
@@ -47,6 +52,8 @@ void test_PrintColorMap()
     assert(colorMap[24].number == 25);
     assert(colorMap[24].majorColor == "Violet");
     assert(colorMap[24].minorColor == "Slate");
+
+    assert(expectedstr == actualstr);
 }
 
 int main() {
